@@ -8,20 +8,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
-    <h1>Serge "Pwersurge" Belanger</h1>
-
-    <div class="maingrid">
-        <div class="box" stile="grid-area: box-1"></div>
-        <div class="box" stile="grid-area: box-2"></div>
-        <div class="box" stile="grid-area: box-3"></div>
-        <div class="box" stile="grid-area: box-4"></div>
-    </div>
-    <footer>
-        <p>Email: sergebjr@gmail.com</p><br>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sbjr2020/">Serge Belanger Jr</a></p><br>
-        <p>Github: <a href="https://github.com/Pwersurge">Pwersurge</a></p><br>
-    </footer>
+   <nav> <button onclick="toggleSidebar()">Projects</button>
+  <a class="nav-btn github-btn" href="https://github.com/Pwersurge" target="_blank">
+    <span class="github-logo">
+      <span class="gh-ear gh-ear-left"></span>
+      <span class="gh-ear gh-ear-right"></span>
+      <span class="gh-face"></span>
+      <span class="gh-eye gh-eye-left"></span>
+      <span class="gh-eye gh-eye-right"></span>
+    </span>
+    GitHub
+  </a>
+  <a class="nav-btn email-btn" href="mailto:sergebjr@gmail.com">
+  <span class="envelope-logo"></span>
+  Email
+</a>
+  <a class="nav-btn linkedin-btn" href="https://www.linkedin.com/in/sbjr2020/" target="_blank">
+    <span class="linkedin-logo">in</span>
+    LinkedIn
+  </a>
+  </nav>
+   <aside id="sidebar">
+    <ul>
+    <li><a href="#project1"></a></li>
+    <li><a href="#project2"></a></li>
+    <li><a href="#project3"></a></li>
+    <li><a href="#project4"></a></li>
+    <!-- Add more links as needed -->
+  </ul>
+    </aside>
+   <main>
+    <h1>Welcome to My Portfolio!</h1><br>
+    <p>My name is Serge "Pwersurge" Belanger, and I am a web developer with a passion for creating beautiful and functional websites. Below are some of my projects that showcase my skills in HTML5, CSS, and JavaScript.</p>
+    <p>Feel free to explore my work and reach out if you have any questions or would like to collaborate!</p>
+    <p>Click the button above to view my projects.</p>
+    <p>My projects are designed to be responsive and user-friendly, ensuring a seamless experience across devices. I have a strong focus on clean code and best practices in web development.</p>
+  <section id="project1">
+    <h2>Project 1: TeaCozy Exercise</h2>
+     <img src="teacozypreview.png" alt="TeaCozy Project Preview" style="max-width:100%;border-radius:8px;margin:1em 0;">
+    <p>HTML5, CSS Styling including Flexbox fundamentals</p>
+  </section>
+  <section id="project2">
+    <h2>Project 2: DasmotoA-C Exercise</h2>
+    <p>HTML5 with focus on Color Coding and Layout</p>
+  <section id="project3">
+    <h2>Project 3: Corporate Website Example</h2>
+    <p>HTML5, CSS, Buttons & interactivity</p>
+  <section id="project4">
+    <h2>Project 4: Responsive Club Website</h2>
+    <p>HTML5, CSS with focus on media queries and responsiveness for different screen sizes</p>
+  </section>
+  <!-- Add more projects as needed -->
+   </main>
+   <footer>Serge "Pwersurge" Belanger 2025</footer>
 </body>
 </html>

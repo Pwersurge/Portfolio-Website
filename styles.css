@@ -21,3 +21,329 @@
     font-weight: 400;
     font-style: normal;
 }
+.vt323-bold {
+    font-family: "VT323", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1{
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+p{
+  font-family: "silkscreen", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* body properties */
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+  "navbar navbar"
+  "sidebar main"
+  "sidebar footer";
+  background: linear-gradient(to bottom, #0a1931, #1a1a2e);
+  color: #f7ca18; /* Retro gold, matches your accent */
+}
+nav{
+  top: 0;
+  position: sticky;
+  grid-area: navbar;
+  background-color:darkblue;
+  color: white;
+  padding: 1em;
+  font-family: "vt323-bold", monospace;
+  padding: 1em;
+}
+aside{
+  height: calc(100vh -51px);
+  top: 51px;
+  position: sticky;
+  align-self: start;
+  grid-area: sidebar;
+  background-color: lightblue;
+  display: none;
+}
+aside.show{
+  display: block;
+}
+main{
+  grid-area: main;
+  color: #f7ca18; /* Retro gold, matches your accent */
+}
+footer{
+  grid-area: footer;
+  background: black;
+  color: white;
+  padding: 2em;
+  font-family: "vt323-bold", monospace;
+}
+
+@media(max-width: 800px){
+  body{
+    grid-template-columns: 1fr;
+  }
+  aside{
+    position: fixed;
+    width: 300px;
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+}
+
+nav button {
+  background-color: #0a1931;      /* Slightly lighter/darker than nav */
+  color: #fff;
+  border: 5px outset #fff;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-family: "VT323", monospace;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  margin-right: 1em;
+}
+
+nav button:hover,
+nav button:focus {
+  background-color: #185adb;      /* Brighter blue on hover */
+  color: #fff;
+  border-color: #f7ca18;          /* Optional: gold border on hover */
+  outline: none;
+  color: #f7ca18; /* Gold accent for text */
+}
+
+aside {
+  height: calc(100vh - 51px);
+  top: 51px;
+  position: sticky;
+  align-self: start;
+  grid-area: sidebar;
+  background-color: #0a1931; /* Match navbar button */
+  color: #fff;
+  font-family: "VT323", monospace;
+  font-size: 1.1em;
+  border-right: 4px solid #185adb;
+  box-shadow: 2px 0 8px rgba(10,25,49,0.2);
+  padding: 1.5em 0.5em;
+  display: none;
+  z-index: 5;
+}
+
+aside.show {
+  display: block;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside li {
+  margin-bottom: 1.2em;
+}
+
+aside a {
+  color: #f7ca18; /* Gold accent for links */
+  text-decoration: none;
+  font-family: "Silkscreen", monospace;
+  font-size: 1em;
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+}
+
+aside a:hover,
+aside a:focus {
+  background: #185adb;
+  color: #fff;
+  outline: none;
+}
+
+main {
+  grid-area: main;
+  background-color: #1a1a2e; /* Deep blue/purple for retro feel */
+  background-image: repeating-linear-gradient(
+    135deg,
+    #23234b 0px,
+    #23234b 2px,
+    #1a1a2e 2px,
+    #1a1a2e 8px
+  );
+  border-radius: 12px;
+  box-shadow: 0 0 16px #000a, 0 0 0 4px #185adb;
+  padding: 2em;
+  margin: 2em 1em;
+}
+
+main h1, main h2, main h3 {
+  color: #fff; /* Make headings stand out */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-btn {
+  background-color: #0a1931;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-family: "VT323", monospace;
+  font-size: 1.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+  background-color: #185adb;
+  color: #f7ca18;
+  border-color: #f7ca18;
+  outline: none;
+}
+
+.linkedin-btn .linkedin-logo {
+  display: inline-block;
+  background: #0077b5;
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 0.1em 0.4em 0.1em 0.4em;
+  margin-right: 0.3em;
+  letter-spacing: 0.05em;
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 0 #185adb, 2px 2px 0 #fff;
+  vertical-align: middle;
+}
+
+.github-btn .github-logo {
+  display: inline-block;
+  position: relative;
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+}
+
+.github-btn .gh-face {
+  position: absolute;
+  left: 0.2em;
+  top: 0.4em;
+  width: 1.2em;
+  height: 1em;
+  background: #181717;
+  border-radius: 0.7em 0.7em 1em 1em / 0.7em 0.7em 1em 1em;
+  z-index: 2;
+}
+
+.github-btn .gh-ear {
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  background: #181717;
+  border-radius: 0.2em 0.2em 0.3em 0.3em / 0.2em 0.2em 0.3em 0.3em;
+  top: 0.1em;
+  z-index: 1;
+}
+.github-btn .gh-ear-left {
+  left: 0.05em;
+  transform: rotate(-20deg);
+}
+.github-btn .gh-ear-right {
+  right: 0.05em;
+  transform: rotate(20deg);
+}
+
+.github-btn .gh-eye {
+  position: absolute;
+  width: 0.18em;
+  height: 0.18em;
+  background: #fff;
+  border-radius: 50%;
+  top: 0.85em;
+  z-index: 3;
+}
+.github-btn .gh-eye-left {
+  left: 0.55em;
+}
+.github-btn .gh-eye-right {
+  right: 0.55em;
+}
+
+.email-btn .envelope-logo {
+  display: inline-block;
+  width: 1.3em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  position: relative;
+  background: #fff;
+  border: 2px solid #0a1931;
+  border-radius: 2px;
+  box-shadow: 1px 1px 0 #185adb, 2px 2px 0 #fff;
+}
+
+.email-btn .envelope-logo::before,
+.email-btn .envelope-logo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0a1931;
+}
+
+.email-btn .envelope-logo::before {
+  top: 0.25em;
+  transform: skewY(-20deg);
+}
+
+.email-btn .envelope-logo::after {
+  bottom: 0.25em;
+  transform: skewY(20deg);
+}
+main section {
+  margin-bottom: 2em; /* Adjust value as needed */
+}
+
+main h2 {
+  font-family: "Press Start 2P", monospace; /* Pixel/arcade font */
+  color: #6b9cf7;                           /* Retro gold */
+  font-size: 1.3em;
+  letter-spacing: 0.04em;
+  text-shadow:
+    2px 2px 0 #855682,   /* Dark shadow for depth */
+    0 0 6px #1a5fe7;     /* Blue glow for retro effect */
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  text-transform: uppercase;                 /* Optional: all-caps for more retro feel */
+}
